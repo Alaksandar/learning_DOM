@@ -23,7 +23,6 @@ console.log(li_odd);
 // 2 секунды красный, потом через 2 секунды опять синий и т.д.).
 //     Для этого использовать setInterval.
 
-
 for (let el of li_even) {
     el.classList.toggle("even");
     let elStyles = getComputedStyle(el);
@@ -44,11 +43,45 @@ for (let el of li_odd) {
 
 
 
-// //      h1: переключение цвета
+// //      h1: переключение цвета (li: неудачное переключение)
 
 // h1.classList.toggle("odd");
-// let h1Styles = getComputedStyle(h1);
-// let colorChange = setInterval(() => {
+// setInterval(() => {
 //     h1.classList.toggle("odd"); h1.classList.toggle("even");
 // }, 2000);
 
+// // or:
+
+// setInterval(() => {
+//     h1.style.color = h1.style.color === "blue" ? "red" : "blue";
+// }, 2000)
+
+// // or:
+
+// let colorChange = function(elem) {
+//     setInterval(() => {
+//         elem.style.color = elem.style.color === "blue" ? "red" : "blue";
+//     }, 2000)
+// }
+// colorChange(h1);
+
+// // or:
+
+// class ColorChange {
+//     constructor(elem) {
+//         for (let el of elem) {
+//             setInterval(() => {
+//                 el.style.color = el.style.color === "blue" ? "red" : "blue";
+//             }, 2000);
+//         }
+//     }
+// }
+// let h1_color = new ColorChange(document.querySelectorAll("h1"));
+// let li_color = new ColorChange(li);
+
+
+// for (let el of li) {
+//     setInterval(() => {
+//         el.style.color = el.style.color === "blue" ? "red" : "blue";
+//     }, 2000)
+// }

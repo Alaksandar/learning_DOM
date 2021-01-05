@@ -1,8 +1,8 @@
 /* Добавьте для всех четных элементов li красный цвет текста. 
 А для нечетных элементов синий цвет текста (это можно сделать через styles).  */
 
-/* ul li:nth-child(even) {color:#F00;} */
-/* ul li:nth-child(odd) {color:#00F;} */
+/* ul li:nth-child(even) {color:#F00;}
+ul li:nth-child(odd) {color:#00F;} */
 
 .even {color:#F00;}
 
